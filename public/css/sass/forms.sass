@@ -1,0 +1,97 @@
+$main: #FF6148
+$second: #1F2633
+$input: #D9D9D9
+$bg: #16191E
+
+@mixin center()
+    display: flex
+    align-items: center
+    justify-content: center
+
+@mixin centerColumn()
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+
+@import _btn.sass
+
+.content
+    form
+        width: 500px
+        min-height: 600px
+        border-radius: 15px
+        background-color: $second
+        padding: 40px 40px
+        @include centerColumn()
+        justify-content: space-between !important
+        gap: 40px
+
+        .btn
+            width: 200px
+            height: 60px
+            border-radius: 50px
+            box-shadow: 0px 0px 36px 0px #FF6148
+            @include center()
+            font-size: 24px
+            transition: 0.5s all ease-in-out
+            border: none
+
+            &:hover
+                cursor: pointer
+
+        .link
+            @include centerColumn()
+            gap: 15px
+
+        .inputBox
+            width: 100%
+            @include centerColumn()
+            gap: 16px
+
+            label
+                width: 100%
+                height: auto
+                @include centerColumn()
+                align-items: stretch !important
+                gap: 1px
+                font-size: 18px
+                font-weight: 300
+
+                &:hover
+                    cursor: pointer
+
+                input
+                    width: 100%
+                    height: 45px
+                    background: $input
+                    padding: 0 7px
+                    border-radius: 10px
+                    color: black
+                    border: none
+                    font-size: 20px
+
+                    &:focus
+                        outline: none
+
+        .checkBox
+
+            label
+                .geekmark
+                    content: ""
+                    position: absolute
+                    display: none
+
+                .rmbme
+                    margin-left: 5px
+
+                    &:hover
+                        cursor: pointer
+
+                input[type=checkbox]
+                    transform: scale(1.6)
+                    background-color: $input
+                    border: none
+
+                    &:hover
+                        cursor: pointer

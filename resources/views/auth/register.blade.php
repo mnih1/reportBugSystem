@@ -1,5 +1,61 @@
 <x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
+    <div class="form-div">
+        <form method="POST" action="{{ route('register') }}">
+            @csrf
+            
+                <h1>Register</h1>
+
+            <div class="inputBox">
+                <label for="name">
+                    Name:
+                    <input type="text" class="input-form" id="name"
+                    name="name" 
+                    :value="old('name')" 
+                    required autofocus autocomplete="name" >
+                    <x-input-error :messages="$errors->get('name')" class="mt-2" />
+                </label>
+                <!-- Email Address -->
+                <label for="email">
+                    Email:
+                    <input id="email" class="input-form" type="email" 
+                    name="email" 
+                    :value="old('email')" 
+                    required 
+                    autofocus 
+                    autocomplete="username" >
+                    <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                </label>
+    
+            <!-- Password -->
+                <label for="password">
+                    Password:
+                    <input id="password"
+                    type="password"
+                    name="password"
+                    class="input-form"
+                    required autocomplete="new-password">
+                    <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                </label>
+                <label for="passwordConfirmation">
+                    Confirm password:
+                    <input type="password" 
+                    class="input-form"
+                    id="password_confirmation"
+                    type="password"
+                    name="password_confirmation"
+                    required autocomplete="new-password">
+                    <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+                </label>
+            </div>
+
+            <button type="submit" class="filled btn">Register</button>
+            <div class="link">
+                <a href="{{ route('login') }}">I have an account</a>
+            </div>
+        </form>
+    </div>
+    
+    {{-- <form method="POST" action="{{ route('register') }}">
         @csrf
 
         <!-- Name -->
@@ -48,5 +104,5 @@
                 {{ __('Register') }}
             </x-primary-button>
         </div>
-    </form>
+    </form> --}}
 </x-guest-layout>

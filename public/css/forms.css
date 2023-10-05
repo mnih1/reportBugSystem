@@ -1,0 +1,98 @@
+.filled {
+  background-color: #FF6148;
+}
+
+.border {
+  border: 3px solid #FF6148;
+}
+
+.content form {
+  width: 500px;
+  min-height: 600px;
+  border-radius: 15px;
+  background-color: #1F2633;
+  padding: 40px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between !important;
+  gap: 40px;
+}
+.content form .btn {
+  width: 200px;
+  height: 60px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 36px 0px #FF6148;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  transition: 0.5s all ease-in-out;
+  border: none;
+}
+.content form .btn:hover {
+  cursor: pointer;
+}
+.content form .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.content form .inputBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+}
+.content form .inputBox label {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: stretch !important;
+  gap: 1px;
+  font-size: 18px;
+  font-weight: 300;
+}
+.content form .inputBox label:hover {
+  cursor: pointer;
+}
+.content form .inputBox label input {
+  width: 100%;
+  height: 45px;
+  background: #D9D9D9;
+  padding: 0 7px;
+  border-radius: 10px;
+  color: black;
+  border: none;
+  font-size: 20px;
+}
+.content form .inputBox label input:focus {
+  outline: none;
+}
+.content form .checkBox label .geekmark {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.content form .checkBox label .rmbme {
+  margin-left: 5px;
+}
+.content form .checkBox label .rmbme:hover {
+  cursor: pointer;
+}
+.content form .checkBox label input[type=checkbox] {
+  transform: scale(1.6);
+  background-color: #D9D9D9;
+  border: none;
+}
+.content form .checkBox label input[type=checkbox]:hover {
+  cursor: pointer;
+}

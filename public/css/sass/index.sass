@@ -1,0 +1,49 @@
+$main: #FF6148
+$second: #1F2633
+$input: #D9D9D9
+$bg: #16191E
+
+@mixin center()
+    display: flex
+    align-items: center
+    justify-content: center
+
+@mixin centerColumn()
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+
+.content
+    .start
+        @include centerColumn()
+        gap: 40px
+
+        h2
+            font-size: 40px
+            font-weight: 700
+
+        .btnBox
+            @include center()
+            gap: 160px
+            height: 150px
+
+            a
+                width: 200px
+                height: 60px
+                border-radius: 50px
+                box-shadow: 0px 0px 36px 0px #FF6148
+                @include center()
+                font-size: 24px
+                transition: 0.5s all ease-in-out
+
+                &:hover
+                    transform: scale(1.05)
+                    cursor: pointer
+
+                    &.filled
+                        background: none
+                        border: 3px solid $main
+
+                    &.border
+                        background-color: $main
