@@ -1,6 +1,6 @@
 <x-guest-layout>
     <div class="form-div">
-        <form method="POST" action="{{ route('register') }}">
+        <form method="POST" action="{{ route('register') }}" class="normal">
             @csrf
             
                 <h1>Register</h1>

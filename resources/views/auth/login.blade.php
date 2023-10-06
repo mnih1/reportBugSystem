@@ -1,7 +1,7 @@
 <x-guest-layout>
     <!-- Session Status -->
     <div class="form-div">
-        <form method="POST" action="{{ route('login') }}">
+        <form method="POST" action="{{ route('login') }}" class="normal">
             @csrf
             
                 <h1>Login</h1>
@@ -41,7 +41,7 @@
             </div>
             <button type="submit" class="filled btn">Login</button>
             <div class="link">
-                <a href="">I forgot the password</a>
+                <a href="{{ route('password.request') }}">I forgot the password</a>
                 <a href="{{ route('register') }}">Create a new account</a>
             </div>
         </form>
