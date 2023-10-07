@@ -1,0 +1,44 @@
+.container {
+  flex-direction: row !important;
+}
+.container nav {
+  height: 100vh;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between !important;
+  background-color: #212830;
+}
+.container nav .top, .container nav .bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container nav .top .box, .container nav .bottom .box {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+.container nav .top .box span, .container nav .bottom .box span {
+  display: none;
+}
+.container nav .top .box:hover, .container nav .bottom .box:hover {
+  cursor: pointer;
+}
+.container nav .top .box .arrow, .container nav .bottom .box .arrow {
+  position: absolute;
+  right: -14px;
+}
+.container main {
+  width: calc(100vw - 80px);
+  height: 100vh;
+}

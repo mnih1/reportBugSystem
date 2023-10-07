@@ -7,6 +7,7 @@
 
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         <link rel="stylesheet" href="{{ asset('css/forms.css') }}">
+        <link rel="stylesheet" href="{{ asset('fontawesome/css/all.css') }}">
 
         <title>Report Bug System</title>
     </head>
