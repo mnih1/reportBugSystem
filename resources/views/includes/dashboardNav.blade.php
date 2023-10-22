@@ -1,8 +1,8 @@
-<nav>
+<nav id="nav">
     <div class="top">
-        <a href="" class="box">
+        <button class="box" onclick="toggleNav()" style="border: none; background: none">
             RBS <i class="fa-solid fa-circle-arrow-right arrow"></i>
-        </a>
+        </button>
         <a href="" class="box">
             <i class="fa-solid fa-plus"></i> <span>New app</span>
         </a>
@@ -22,7 +22,7 @@
                 @csrf
                 <a  :href="route('logout')" 
                 onclick="event.preventDefault();
-                this.closest('form').submit();"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a>
+                this.closest('form').submit();"><i class="fa-solid fa-right-from-bracket"></i><span id="logoutSpan">Logout</span></a>
             </form>
         </div>
     </div>

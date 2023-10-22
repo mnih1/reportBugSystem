@@ -2,6 +2,8 @@
 
 @section('head')
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+
+    <script src="{{ asset('js/dashNav.js') }}" defer></script>
 @endsection
 
 @section('nav')

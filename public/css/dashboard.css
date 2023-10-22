@@ -2,6 +2,9 @@
   flex-direction: row !important;
 }
 .container nav {
+  position: fixed;
+  left: 0;
+  top: 0;
   height: 100vh;
   width: 80px;
   display: flex;
@@ -10,6 +13,7 @@
   flex-direction: column;
   justify-content: space-between !important;
   background-color: #212830;
+  transition: 0.5s all ease-in-out;
 }
 .container nav .top, .container nav .bottom {
   width: 100%;
@@ -27,18 +31,58 @@
   justify-content: center;
   font-size: 24px;
   font-weight: 700;
+  gap: 5px;
+}
+.container nav .top .box form span, .container nav .bottom .box form span {
+  display: none;
 }
 .container nav .top .box span, .container nav .bottom .box span {
-  display: none;
+  width: 0;
+  height: 0;
+  transform: scale(0);
 }
 .container nav .top .box:hover, .container nav .bottom .box:hover {
   cursor: pointer;
 }
 .container nav .top .box .arrow, .container nav .bottom .box .arrow {
+  transition: 0.3s;
   position: absolute;
   right: -14px;
 }
+.container nav.active {
+  width: 250px !important;
+}
+.container nav.active .box {
+  padding: 0 20px;
+  justify-content: left !important;
+}
+.container nav.active .box form a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container nav.active .box form a span {
+  display: block;
+}
+.container nav.active .box i {
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container nav.active .box span {
+  transition: 0.1s 0.4s;
+  width: auto;
+  height: auto;
+  transform: scale(1);
+}
+.container nav.active .box .arrow {
+  transform: rotate(180deg);
+}
 .container main {
+  position: relative;
+  margin-left: 80px;
   width: calc(100vw - 80px);
   height: 100vh;
+  transition: 0.5s all ease-in-out;
 }

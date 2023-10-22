@@ -19,11 +19,15 @@ $nav: #212830
     flex-direction: row !important
 
     nav
+        position: fixed
+        left: 0
+        top: 0
         height: 100vh
         width: 80px
         @include centerColumn()
         justify-content: space-between !important
         background-color: $nav
+        transition: 0.5s all ease-in-out
 
         .top, .bottom
             width: 100%
@@ -36,17 +40,55 @@ $nav: #212830
                 @include center()
                 font-size: 24px
                 font-weight: 700
+                gap: 5px
+
+                form
+                    span
+                        display: none
 
                 span
-                    display: none
+                    width: 0
+                    height: 0
+                    transform: scale(0)
 
                 &:hover
                     cursor: pointer
 
                 .arrow
+                    transition: 0.3s
                     position: absolute
                     right: -14px
 
+    nav.active
+        width: 250px !important
+
+        .box
+            padding: 0 20px
+            justify-content: left !important
+
+            form
+                a
+                    @include center()
+
+                    span
+                        display: block
+
+            i
+                width: 40px
+                @include center()
+
+            span
+                transition: 0.1s 0.4s
+                width: auto
+                height: auto
+                transform: scale(1)
+
+            .arrow
+                transform: rotate(180deg)
+
     main
+        position: relative
+        margin-left: 80px
         width: calc( 100vw - 80px )
         height: 100vh
+        transition: 0.5s all ease-in-out
