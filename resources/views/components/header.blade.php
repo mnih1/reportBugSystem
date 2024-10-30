@@ -1,0 +1,1 @@
+<h1 {{ $attributes->merge(['class' => 'w-full h-14 text-white flex justify-center items-center text-3xl font-extrabold']) }}><a href="{{ route('/') }}">Report Bug System</a></h1>
