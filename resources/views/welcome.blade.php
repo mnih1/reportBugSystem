@@ -20,7 +20,7 @@
                 <a href="{{ route('report') }}" class="w-56 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl font-light shadow-[0_0_25px] shadow-primary hover:scale-110 duration-300">
                     Report
                 </a>
-                <a href="" class="w-56 h-16  rounded-full flex items-center justify-center text-white text-2xl font-light border border-primary shadow-[0_0_25px] shadow-primary hover:scale-110 duration-300">
+                <a href="{{ route('login') }}" class="w-56 h-16  rounded-full flex items-center justify-center text-white text-2xl font-light border border-primary shadow-[0_0_25px] shadow-primary hover:scale-110 duration-300">
                     Panel
                 </a>
             </div>
